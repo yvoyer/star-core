@@ -1,0 +1,31 @@
+{
+    "name": "star/core",
+    "description": "An essay to eliminate returned values, class hierarchy",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Yannick Voyer",
+            "email": "star.yvoyer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Star\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Star\\": "tests"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
