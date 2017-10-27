@@ -2,10 +2,12 @@
 
 namespace Star\Expressions;
 
+use Star\Application;
 use Star\Conditional;
 use Star\Conditionals\AndOperator;
 use Star\Conditionals\Same;
 use Star\Expression;
+use Star\Statement;
 
 final class StarString implements Expression
 {
@@ -33,16 +35,6 @@ final class StarString implements Expression
     }
 
     /**
-     * @param Conditional $conditional
-     *
-     * @return Conditional
-     */
-    public function andX(Conditional $conditional)
-    {
-        throw new \RuntimeException('Method ' . __METHOD__ . ' not implemented yet.');
-    }
-
-    /**
      * @param Expression $expression
      *
      * @return Expression
@@ -58,5 +50,15 @@ final class StarString implements Expression
     public function toString()
     {
         return $this->string;
+    }
+
+    /**
+     * @param Application $application
+     *
+     * @return Statement
+     */
+    public function statement(Application $application)
+    {
+        throw new \RuntimeException('Method ' . __METHOD__ . ' not implemented yet.');
     }
 }

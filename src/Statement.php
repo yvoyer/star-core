@@ -5,9 +5,16 @@ namespace Star;
 interface Statement
 {
     /**
-     * @param Procedure $procedure
+     * @param Expression $expression
      *
-     * @return Expression
+     * @return Statement
      */
-    public function then(Procedure $procedure);
+    public function isSame(Expression $expression);
+
+    /**
+     * @param Conditional $conditional
+     *
+     * @return Statement
+     */
+    public function andX(Conditional $conditional);
 }

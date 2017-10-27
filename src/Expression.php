@@ -12,11 +12,11 @@ interface Expression
     public function isSame(Expression $expression);
 
     /**
-     * @param Conditional $conditional
+     * @param Application $application
      *
-     * @return Conditional
+     * @return Statement
      */
-    public function andX(Conditional $conditional);
+    public function statement(Application $application);
 
     /**
      * @param Conditional $conditional

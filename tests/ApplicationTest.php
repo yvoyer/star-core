@@ -28,7 +28,7 @@ final class ApplicationTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException(\Exception::class, 'Pass');
         Application::execute(new ThrowException(new StarString('Pass')))
-            ->when(Expr::booleanTrue()->andX(Expr::BooleanTrue()->isSame(Expr::BooleanTrue())))
+            ->when(Expr::booleanTrue())->isSame(Expr::booleanTrue())->andX(Expr::BooleanTrue())
         ;
     }
 

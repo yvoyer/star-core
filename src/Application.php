@@ -20,13 +20,13 @@ final class Application
     }
 
     /**
-     * @param Conditional $conditional
+     * @param Expression $expression
      *
      * @return Statement
      */
-    public function when(Conditional $conditional)
+    public function when(Expression $expression)
     {
-        return $conditional->evaluate($this->procedure);
+        return $expression->statement($this);
     }
 
     /**
